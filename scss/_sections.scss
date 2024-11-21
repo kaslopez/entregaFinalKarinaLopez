@@ -1,0 +1,144 @@
+@import "variables";
+
+/* Sección Historia */
+.story {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .story-content {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center; 
+    gap: 20px; 
+    justify-content: center; 
+    margin-left: 50px; 
+  }
+  
+  .story-content .text {
+    flex: 1; 
+    text-align: center; 
+    max-width: 600px; 
+    margin: 0 auto; 
+  }
+  
+  .story-content .image {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .story-image {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .story-image:hover {
+    transform: scale(1.02);
+  }
+  
+  
+  /* Separador */
+  .section-separator {
+    display: flex; 
+    justify-content: center; 
+    margin: 40px 0; 
+  }
+  
+  .section-separator img {
+    max-width: 60%; 
+    height: auto; 
+    display: block; 
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1)); 
+  }
+  
+  /* Personajes y Galería */
+  .character-grid,
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .character-card,
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .character-card img,
+  .gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .character-card:hover img,
+  .gallery-item:hover img {
+    transform: scale(1.1);
+  }
+  
+  .character-info,
+  .gallery-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0));
+    backdrop-filter: blur(10px);
+    color: $white;
+    padding: 20px -30px 20px 30px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .character-card:hover .character-info,
+  .gallery-item:hover .gallery-info {
+    transform: translateY(0);
+  }
+  
+  /* Contacto */
+  .contact {
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .contact input, .contact button {
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .contact input {
+    width: 300px;
+    border: 1px solid #383838;
+  }
+  
+  .contact button {
+    background:  rgb(78, 226, 234);
+    color: #383838;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .contact button:hover {
+    background:  rgb(51, 150, 155);
+    color: $white;
+  }
+  
+  /* Footer */
+  .footer {
+    margin-top: 120px;
+    padding: 20px;
+    text-align: center;
+    background: $black;
+    color: $white;
+  }

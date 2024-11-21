@@ -1,0 +1,92 @@
+@import "variables";
+
+.hero {
+    position: relative;
+    background: url('../img/fondoJuego.webp') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1); 
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1); 
+  }
+  
+  /* Animación de burbujas */
+  .bubbles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  
+  .bubble {
+    position: absolute;
+    bottom: -100px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(133, 248, 125, 0.7), rgba(249, 131, 218, 0.4), rgba(24, 226, 245, 0.2));
+    box-shadow: inset 0 0 10px rgba(22, 220, 246, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: rise 10s infinite;
+    opacity: 0.9;
+  }
+  
+  .bubble::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Tamaños y animaciones de burbujas */
+  .bubble:nth-child(1) { width: 30px; height: 30px; left: 20%; animation-duration: 8s; animation-delay: 1s; }
+  .bubble:nth-child(2) { width: 50px; height: 50px; left: 40%; animation-duration: 10s; animation-delay: 3s; }
+  .bubble:nth-child(3) { width: 40px; height: 40px; left: 60%; animation-duration: 12s; animation-delay: 5s; }
+  .bubble:nth-child(4) { width: 20px; height: 20px; left: 80%; animation-duration: 6s; animation-delay: 2s; }
+  .bubble:nth-child(5) { width: 60px; height: 60px; left: 10%; animation-duration: 11s; animation-delay: 4s; }
+  .bubble:nth-child(6) { width: 25px; height: 25px; left: 30%; animation-duration: 9s; animation-delay: 6s; }
+  .bubble:nth-child(7) { width: 35px; height: 35px; left: 70%; animation-duration: 7s; animation-delay: 3s; }
+  .bubble:nth-child(8) { width: 45px; height: 45px; left: 90%; animation-duration: 10s; animation-delay: 5s; }
+  
+  @keyframes rise {
+    0% { transform: translateY(0) scale(1); opacity: 0.9; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-100vh) scale(1.2); opacity: 0; }
+  }
+  
+  /* Logo Large */
+  .logo-large-container {
+    text-align: center;
+    margin: 90px 0;
+  }
+  
+  .logo-large {
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+    animation: wave 2s infinite ease-in-out;
+  }
+  
+  @keyframes wave {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
+  }
