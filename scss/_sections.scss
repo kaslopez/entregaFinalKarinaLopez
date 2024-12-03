@@ -10,7 +10,7 @@
     display: flex;
     flex-wrap: wrap; 
     align-items: center; 
-    gap: 20px; 
+    gap: 10px; 
     justify-content: center; 
     margin-left: 50px; 
   }
@@ -18,7 +18,7 @@
   .story-content .text {
     flex: 1; 
     text-align: center; 
-    max-width: 600px; 
+    max-width: 800px; 
     margin: 0 auto; 
   }
   
@@ -28,7 +28,7 @@
   }
   
   .story-image {
-    max-width: 80%;
+    max-width: 70%;
     height: auto;
     border-radius: 10px;
     overflow: hidden;
@@ -39,6 +39,54 @@
     transform: scale(1.02);
   }
   
+
+  /* Sección Habilidades */
+.skills {
+  text-align: center;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+.skills-content {
+  display: flex;
+  flex-wrap: wrap; 
+  align-items: center;
+  justify-content: space-between; 
+  gap: 10px;
+}
+
+.skills-content .text {
+  flex: 1; 
+  text-align: center; 
+  max-width: 50%; 
+  margin-right: 40px;
+  padding: 0 25px; 
+}
+
+.skills-content .text ul {
+  margin-top: 20px; 
+  list-style-type: none; 
+  padding: 0; 
+}
+
+.skills-content .image {
+  flex: 1;
+  text-align: center;
+  text-align: left;
+  margin-left: 30px;
+}
+
+.skills-image {
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.skills-image:hover {
+  transform: scale(1.02);
+}
   
   /* Separador */
   .section-separator {
@@ -54,7 +102,7 @@
     filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1)); 
   }
   
-  /* Personajes y Galería */
+  /* Personajes y Escenarios */
   .character-grid,
   .gallery-grid {
     display: grid;
@@ -105,6 +153,73 @@
   .gallery-item:hover .gallery-info {
     transform: translateY(0);
   }
+
+  /* Sección Raid Bosses */
+.raidboss-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: $black;
+}
+
+
+.raidboss-section {
+  margin-top: 50px;
+  background-color: $hueso; 
+  padding: 20px 0; 
+}
+.raidboss-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.raidboss-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.raidboss-item {
+  flex: 1 1 calc(25% - 20px); 
+  text-align: center;
+  max-width: 400px;
+}
+
+.raidboss-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.raidboss-item img:hover {
+  transform: scale(1.05);
+}
+
+.raidboss-item p {
+  margin-top: 1px;
+  font-size: 1rem;
+  color: #555;
+}
+
+
+.raidboss-text {
+  margin-top: 60px;
+  font-size: 1.2rem;
+  color: #333;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
   
   /* Contacto */
   .contact {
